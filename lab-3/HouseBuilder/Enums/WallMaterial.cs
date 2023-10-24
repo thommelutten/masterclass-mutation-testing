@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HouseBuilder.Enums
 {
-    public enum Material
+    public enum WallMaterial
     {
         Brick,
         Concrete,

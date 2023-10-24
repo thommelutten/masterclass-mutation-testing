@@ -9,18 +9,18 @@ namespace HouseBuilder.Test
         public void HouseBuilder_BuildHouseWithWalls_Success()
         {
             House house = House.CreateBuilder()
-                .AddWall(Material.Brick)
-                .AddWall(Material.Brick)
-                .AddWall(Material.Stone)
-                .AddWall(Material.Concrete)
+                .AddWall(WallMaterial.Brick)
+                .AddWall(WallMaterial.Brick)
+                .AddWall(WallMaterial.Stone)
+                .AddWall(WallMaterial.Concrete)
                 .Build();
 
             Assert.That(house, Is.Not.Null);
             Assert.That(house.Walls, Has.Count.EqualTo(4));
             Assert.That(house.Walls,
-                Has.Exactly(2).EqualTo(Material.Brick)
-                .And.Exactly(1).EqualTo(Material.Stone)
-                .And.Exactly(1).EqualTo(Material.Concrete));
+                Has.Exactly(2).EqualTo(WallMaterial.Brick)
+                .And.Exactly(1).EqualTo(WallMaterial.Stone)
+                .And.Exactly(1).EqualTo(WallMaterial.Concrete));
         }
 
         [Test]
@@ -29,7 +29,7 @@ namespace HouseBuilder.Test
             var exception = Assert.Throws<InvalidOperationException>(() =>
             {
                 House house = House.CreateBuilder()
-                    .AddWall(Material.Brick)
+                    .AddWall(WallMaterial.Brick)
                     .Build();
             });
 

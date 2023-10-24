@@ -16,7 +16,7 @@ namespace HouseBuilder
             house = new House();
         }
 
-        public HouseBuilder AddWall(Material material)
+        public HouseBuilder AddWall(WallMaterial material)
         {
             house.Walls.Add(material);
             return this;
