@@ -28,10 +28,5 @@ namespace ContactBook
         {
             return _contacts;
         }
-
-        public IEnumerable<Contact> GetAllOrderedByLastName()
-        {
-            return _contacts.OrderBy(c => c.LastName);
-        }
     }
 }
