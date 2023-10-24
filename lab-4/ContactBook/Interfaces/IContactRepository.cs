@@ -12,6 +12,5 @@ namespace ContactBook.Interfaces
         Contact GetById(int id);
         int Add(Contact contact);
         IEnumerable<Contact> GetAll();
-        IEnumerable<Contact> GetAllOrderedByLastName();
     }
 }
